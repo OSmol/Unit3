@@ -14,35 +14,35 @@ public class Task1 {
 	     double kof=0.0;
 	     double res=0.0;
 		 
-		 System.out.print("Введите наименование валюты (usd, eur, rub, byr), которую вы хотели бы конвертировать: "); 
+		 System.out.print("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГўГ Г«ГѕГІГ» (usd, eur, rub, byr), ГЄГ®ГІГ®Г°ГіГѕ ГўГ» ГµГ®ГІГҐГ«ГЁ ГЎГ» ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ ГІГј: "); 
 		 firstCurrency=saveEnteredCurrency();
 		 if(firstCurrency.equals("")) {
-			 System.out.print("Введите наименование валюты (usd, eur, rub, byr), которую вы хотели бы конвертировать: "); 
+			 System.out.print("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГўГ Г«ГѕГІГ» (usd, eur, rub, byr), ГЄГ®ГІГ®Г°ГіГѕ ГўГ» ГµГ®ГІГҐГ«ГЁ ГЎГ» ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ ГІГј: "); 
 			 firstCurrency=saveEnteredCurrency(); 
 		 }
 
-		System.out.print("Введите наименование валюты (usd, eur, rub, byr), в которую вы хотели бы конвертировать: ");
+		System.out.print("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГўГ Г«ГѕГІГ» (usd, eur, rub, byr), Гў ГЄГ®ГІГ®Г°ГіГѕ ГўГ» ГµГ®ГІГҐГ«ГЁ ГЎГ» ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ ГІГј: ");
 		secondCurrency=saveEnteredCurrency();
 		 if(secondCurrency.equals("")) {
-			 System.out.print("Введите наименование валюты (usd, eur, rub, byr), в которую вы хотели бы конвертировать: ");
+			 System.out.print("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГўГ Г«ГѕГІГ» (usd, eur, rub, byr), Гў ГЄГ®ГІГ®Г°ГіГѕ ГўГ» ГµГ®ГІГҐГ«ГЁ ГЎГ» ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ ГІГј: ");
 			 secondCurrency=saveEnteredCurrency(); 
 		 }
 		
 		if(!firstCurrency.equalsIgnoreCase(secondCurrency)) {
-			System.out.print("Введите сумму, которую вы хотели бы конвертировать: ");
+			System.out.print("Г‚ГўГҐГ¤ГЁГІГҐ Г±ГіГ¬Г¬Гі, ГЄГ®ГІГ®Г°ГіГѕ ГўГ» ГµГ®ГІГҐГ«ГЁ ГЎГ» ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ ГІГј: ");
 			if (sc.hasNextDouble()) { 
 				double temp=sc.nextDouble();
 				if(temp>0.0) {
 					a=temp;
 					System.out.println(secondCurrency+" "+a);
-				}else System.out.println("Введено некорректное наименование валюты "+temp);
-				}else System.out.println("Введена некорректная сумма");
-		}else System.out.print("Указаны одинаковые типы валют, конвертация невозможна");
+				}else System.out.println("Г‚ГўГҐГ¤ГҐГ­Г® Г­ГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГўГ Г«ГѕГІГ» "+temp);
+				}else System.out.println("Г‚ГўГҐГ¤ГҐГ­Г  Г­ГҐГЄГ®Г°Г°ГҐГЄГІГ­Г Гї Г±ГіГ¬Г¬Г ");
+		}else System.out.print("Г“ГЄГ Г§Г Г­Г» Г®Г¤ГЁГ­Г ГЄГ®ГўГ»ГҐ ГІГЁГЇГ» ГўГ Г«ГѕГІ, ГЄГ®Г­ГўГҐГ°ГІГ Г¶ГЁГї Г­ГҐГўГ®Г§Г¬Г®Г¦Г­Г ");
 		
 		firstCur.putAll(chooseCurrency(firstCurrency));
 		kof=findCoefficient(secondCurrency, firstCur);
 		res=kof*a;
-		System.out.println("Результат конвертирования: "+a+firstCurrency+" = "+res+secondCurrency);
+		System.out.println("ГђГҐГ§ГіГ«ГјГІГ ГІ ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ Г­ГЁГї: "+a+firstCurrency+" = "+res+secondCurrency);
 
 	}
 	public static Map<String, Double> chooseCurrency(String firstCurrency) {
@@ -78,7 +78,7 @@ public class Task1 {
 	        	firstCur.putAll(byrKurs);
 	            break;
 	        default:
-	        	System.out.println("Что-то пошло не так при первой перезаписи");
+	        	System.out.println("Г—ГІГ®-ГІГ® ГЇГ®ГёГ«Г® Г­ГҐ ГІГ ГЄ ГЇГ°ГЁ ГЇГҐГ°ГўГ®Г© ГЇГҐГ°ГҐГ§Г ГЇГЁГ±ГЁ");
 	            break;
 	    }	
 		return firstCur;
@@ -101,7 +101,7 @@ public class Task1 {
         	coefficient=listOfCoefficients.get("byr");
             break;
         default:
-        	System.out.println("Что-то пошло не так при второй перезаписи");
+        	System.out.println("Г—ГІГ®-ГІГ® ГЇГ®ГёГ«Г® Г­ГҐ ГІГ ГЄ ГЇГ°ГЁ ГўГІГ®Г°Г®Г© ГЇГҐГ°ГҐГ§Г ГЇГЁГ±ГЁ");
             break;
     }
 		
@@ -117,7 +117,7 @@ public class Task1 {
 			if(temp.equalsIgnoreCase("usd")||temp.equalsIgnoreCase("eur")||temp.equalsIgnoreCase("rub")||temp.equalsIgnoreCase("byr")) {
 				saveEnteredCurrency=temp;
 				System.out.println(saveEnteredCurrency+" "+temp);
-			}else System.out.println("Введено некорректное наименование валюты "+temp);
+			}else System.out.println("Г‚ГўГҐГ¤ГҐГ­Г® Г­ГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГўГ Г«ГѕГІГ» "+temp);
 			}
 		
 		if(saveEnteredCurrency.equals("")) {
@@ -129,3 +129,4 @@ public class Task1 {
 	}
 
 }
+// Р·Р°РґР°РЅРёСЏ РјРѕРґСѓР»СЏ 3 Р·Р°С‡С‚РµРЅС‹
